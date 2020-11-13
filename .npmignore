@@ -1,0 +1,15 @@
+# Editor specific
+.idea/
+*.geany
+
+# MacOs specific
+.DS_Store
+
+node_modules/
+.nyc_output/
+coverage/
+out/
+.env
+.git/
+*.yml
+*.sh

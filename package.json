@@ -1,0 +1,32 @@
+{
+  "name": "parser",
+  "version": "1.0.0",
+  "description": "Headless parser api",
+  "main": "index.js",
+  "scripts": {
+    "start": "nf start",
+    "lint": "eslint lib/*.js test/**/*.js *.js",
+    "test": "nyc --reporter=lcov mocha --exit ./test/**/*.test.js"
+  },
+  "keywords": [
+    "parser",
+    "geckoebdriver",
+    "express",
+    "email"
+  ],
+  "author": "Anatolij Ostroumov",
+  "license": "Unlicense",
+  "dependencies": {
+    "express": "^4.17.1",
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "validator": "^13.1.17",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "nyc": "^15.1.0",
+    "foreman": "^3.0.1",
+    "eslint": "^7.12.1",
+    "mocha": "^8.2.1",
+    "should": "^13.2.3"
+  }
+}
