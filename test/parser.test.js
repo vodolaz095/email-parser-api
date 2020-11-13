@@ -26,7 +26,7 @@ describe('parser', function () {
       });
   });
 
-  it('parses https://radonezh.ru/kontakt and finds email', function (){
+  it('parses https://radonezh.ru/kontakt and finds email on it', function (){
     return parser('https://radonezh.ru/kontakt')
       .then(function (data) {
         should.exist(data);

@@ -59,10 +59,14 @@ app.use(function (error, req,res, next){ // eslint-disable-line
   });
 });
 
-app.listen(config.port, function (error) {
-  if (error) {
-    throw error;
-  }
-  logger.info('Application started on 0.0.0.0:%s', config.port);
-});
+module.exports = exports = app;
+
+if(!module.parent) { // if this is top level module in nodejs invocation, we start application
+  app.listen(config.port, function (error) {
+    if (error) {
+      throw error;
+    }
+    logger.info('Application started on 0.0.0.0:%s', config.port);
+  });
+}
 
