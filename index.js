@@ -44,6 +44,7 @@ app.post('/do', function (req, res, next) {
 
   return parser(u)
     .then(function (results){
+      logger.info('Checking address %s gave this results', u, results);
       return res.status(200).json(results);
     })
     .catch(function (error){
