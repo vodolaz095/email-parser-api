@@ -32,8 +32,13 @@ describe('parser', function () {
         should.exist(data);
         data.should.be.an.Array();
         data.length.should.be.equal(1);
-        data.should.containEql('info@radonezh.ru');
         console.log('Emails extracted', data); // eslint-disable-line
+        data[0].info.should.be.equal('info@radonezh.ru is a valid address');
+        data[0].addr.should.be.equal('info@radonezh.ru');
+        data[0].code.should.be.equal(1);
+        data[0].tryagain.should.be.false();
+        data[0].banner.should.be.equal('220 emx.mail.ru ESMTP ready \r\n');
+        data[0].best.should.be.true();
       });
   });
 });

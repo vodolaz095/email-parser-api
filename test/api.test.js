@@ -84,7 +84,7 @@ describe('api', function () {
         if (err) {
           return done(err);
         }
-        res.text.should.be.equal('["info@radonezh.ru"]');
+        res.text.should.containEql('info@radonezh.ru');
         done();
       });
   });
